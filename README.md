@@ -28,28 +28,33 @@ On this graph all exceptions inherit from the BaseException class. And as for th
 The program executes the instructions in the try clause. If it encounters an exception, it interrupts the execution. And if this exception matches the class or classes specified in the except clause, it switches to the instructions contained in the except clause. Note that you can specify several exceptions in the except clause. 
 However, if the exception that occurs is not mentioned in the except clause, the language exception itself generates an error.
 Illustration program 
-`def test():
+```
+def test():
     try :
     resultat = 10/0
     print(resultat)
 except ZeroDivisionError:
-     print("pas de devision par  0")`.
+     print("pas de devision par  0")
+```
+
 ### ELSE CLAUSE IN A try...except Python
 It is possible to add the else clause after the except clause to specify the instructions to execute if no exception is thrown.
 You can put an else clause after an except clause to specify the instructions to execute if there is no exception raised.
 Let's go back to our previous example for this illustration 
-`def test():
+```json
+def test():
     try :
     resultat = 10/2
 except ZeroDivisionError:
     print("pas de division par o")    
     else :
-        print(resultat)`.
-
+        print(resultat)
+```
 ### CLAUSE finally
  The statements contained in the finally clause will be triggered regardless of the result of the execution of the try...except statement in Python. This allows, among other things, to clean up the program before continuing it.
 Example 
-`def exemple():
+```
+def test():
     try : 
     resultat = 10 * (1/0)
 except ZeroDivisionError:
@@ -59,12 +64,13 @@ except ZeroDivisionError:
         print(resultat)
 finally :
     print("fin de l'operation")`.
-
+```
 ### THE RAISE INSTRUCTION
 It is possible to raise an exception ourselves. This operation is performed with the raise statement. It can also be used to propagate exceptions not handled by the except clause.
 
 We can mention the exception to be raised without putting a parameter or specify in the parameter the message to be displayed when the exception is raised. And as for the propagation of exceptions, you just have to write it without anything else
-` def test1(a):
+```
+ def test1(a):
      if a == 0 :
         raise ZeroDivisionError("il y a une division par 0")
          try:
@@ -82,53 +88,43 @@ def test2(a):
             print(resultat2)
         finally :
             print("la gestion est terminée")`.
-
+```
 ### THE KEYWORD PASS
 The pass keyword is useful when you want to raise an exception without performing a specific instruction.
-'def exemple():
+```
+def exemple():
     try:
      resultat2 = 10/0
  except Exception as exc:
      pass
  print("fin de l'operation")
-
+```
 Example of exception use case in data analysis 
 In the development of a program, whether for data analysis or for any other purpose, there is always a risk of generating errors. 
-` def pipeline(x): 
-
+```
+Y = [1,23,45,0,2,5,0]
+def divide(x, y):
     try:
-        x = module_1.predict(x)
-    except:
-        return zero_score_csv -> If zero score, bug is in module_1
-
-    try:
-        x = module_2.predict(x)
-    except:
-        return low_score_csv -> If very low score, bug is in module_2
-
-    try:
-        x = module_3.predict(x)
-    except:
-        return no_csv -> If CSV Not Found Error, bug is in module_3
-
-    try:
-        x = module_4.predict(x)
-    except:
-        return wrong_format_csv -> If Scoring Error, bug is in module_4
-
-    return submission_csv(x)`.
-
+        result = x / y
+    except ZeroDivisionError:
+        print("division by zero!")
+    else:
+        print("result is", result)
+    finally:
+        print("executing finally clause")
+```
 ### WRITE YOUR OWN EXCEPTIONS IN PYTHON
 We can design our own exception to fit our application. All the classes we will create must inherit from the "Exception" class. This practice is the one recommended. 
 We will create a class in pyton to better illustrate this 
-'class MyException(Exception):
+```
+class MyException(Exception):
         def __init__(self, x):
             self.x = x
         def __str__(self):
         return "Erreur dans {0} ".format(self.message)
         def test():
             resultat = 10/0
-            raise MyException("test")'.
-
+            raise MyException("test")
+```
 
 
