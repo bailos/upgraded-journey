@@ -1,3 +1,4 @@
+![organization](/img/Logo.png)
 # THE EXCEPTIONS IN PYTHON
 
 ### CONTENT
