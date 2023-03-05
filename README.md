@@ -140,15 +140,15 @@ class MyException(Exception):
 As in all other languages python offers an error handling technique mainly through the try --- except function.
 Error handling through exceptions is very important in the development of solutions 
 ### Resources
-<https://docs.python.org/fr/3/tutorial/errors.html>
-<https://www.youtube.com/watch?v=sTZeuRdptc0&t=308s>
-<https://www.youtube.com/watch?v=9Xq1lmiKdMw>
-<https://www.kaggle.com/competitions/nfl-health-and-safety-helmet-assignment/discussion/279046>
-<https://www.markdownguide.org/basic-syntax/#links>
-<https://developpement-informatique.com/article/155/la-gestion-des-exceptions-en-python>
-<https://dillinger.io/>
-<https://www.hostinger.fr/tutoriels/tuto-git>
-<https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/getting-started>
+- [1] <https://docs.python.org/fr/3/tutorial/errors.html>
+- [2] <https://www.youtube.com/watch?v=sTZeuRdptc0&t=308s>
+- [3] <https://www.youtube.com/watch?v=9Xq1lmiKdMw>
+- [4] <https://www.kaggle.com/competitions/nfl-health-and-safety-helmet-assignment/discussion/279046>
+- [5] <https://www.markdownguide.org/basic-syntax/#links>
+- [6] <https://developpement-informatique.com/article/155/la-gestion-desexceptions-en-python>
+- [7] <https://dillinger.io/>
+- [8] <https://www.hostinger.fr/tutoriels/tuto-git>
+- [9] <https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/getting-started>
 
 
 
