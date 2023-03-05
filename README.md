@@ -1,13 +1,23 @@
 # THE EXCEPTIONS IN PYTHON
+
+### CONTENT
+- #### Introduction
+- #### What is an exception in Python?
+- #### PRESENTATION OF THE EXCEPTIONS
+- #### EXCEPTION MANAGEMENT WITH try...except in Python
+- #### ELSE CLAUSE IN A try...except Python
+- #### CLAUSE finally
+- #### THE RAISE INSTRUCTION
+- #### THE KEYWORD PASS
+- #### WRITE YOUR OWN EXCEPTIONS IN PYTHON
+- #### CONCLUSION
+- #### RESSOURCES
 ### INTRODUCTION
 In computer science, when executing a program, there is always a risk of error. That's why every good language has a basic error handling that concretely corresponds to the display of an error message informing us about the type of error detected and (often) to the stopping of the program execution after the error has been detected.
 In this article, we will present : 
-- the design of exceptions in python 
 - the theory of exceptions in python 
 - Use case examples and uses related to data analysis.
 - Potential alternatives to exceptions with python 
-
-### PRESENTATION OF THE CONCEPT
 ### What is an exception in Python?
 First of all, we need to know what an error means in Python. In fact, there are two types of errors in Python:
 Syntax errors ;
@@ -19,11 +29,11 @@ In this article we will focus on the exceptions.
 ### PRESENTATION OF THE EXCEPTIONS
 In Python, exceptions are thrown after the execution of an invalid statement Let's look at a small example of illustration.
 The last three lines contain the context in which the exception occurred. This is the module concerned and the number of the line in which the error occurred. The last line specifies the type of exception generated. Here, it is the division by 0 that was triggered using the ZeroDivisionError exception class. 
-![exception]( https://drive.google.com/file/d/133BTC0s-Pv8hrLPqhonhp3rYwS2RsJRI/view?usp=share_link )
+![exception](/img/exemple.png)
 There are several exception classes in Python representer in a hierarchical graph 
 On this graph all exceptions inherit from the BaseException class. And as for the frequently encountered exceptions, they come from the Exception class. The ones illustrated in the flowchart are the so-called native exceptions.
-![organization](https://drive.google.com/file/d/1jENPPnjPhv8IFwYHid5eMsoI-qc4H5f4/view?usp=share_link)
-### GESTION DES EXCEPTIONS AVEC try...except Python
+![organization](/img/Organigramme.png)
+### EXCEPTION MANAGEMENT WITH try...except in Python
 "try...except" is a statement that allows you to catch exceptions that your application may generate and execute other statements accordingly.
 The program executes the instructions in the try clause. If it encounters an exception, it interrupts the execution. And if this exception matches the class or classes specified in the except clause, it switches to the instructions contained in the except clause. Note that you can specify several exceptions in the except clause. 
 However, if the exception that occurs is not mentioned in the except clause, the language exception itself generates an error.
@@ -126,5 +136,20 @@ class MyException(Exception):
             resultat = 10/0
             raise MyException("test")
 ```
+### Conclusion
+As in all other languages python offers an error handling technique mainly through the try --- except function.
+Error handling through exceptions is very important in the development of solutions 
+### Resources
+<https://docs.python.org/fr/3/tutorial/errors.html>
+<https://www.youtube.com/watch?v=sTZeuRdptc0&t=308s>
+<https://www.youtube.com/watch?v=9Xq1lmiKdMw>
+<https://www.kaggle.com/competitions/nfl-health-and-safety-helmet-assignment/discussion/279046>
+<https://www.markdownguide.org/basic-syntax/#links>
+<https://developpement-informatique.com/article/155/la-gestion-des-exceptions-en-python>
+<https://dillinger.io/>
+<https://www.hostinger.fr/tutoriels/tuto-git>
+<https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/getting-started>
+
+
 
 
